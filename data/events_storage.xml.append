@@ -1,0 +1,6680 @@
+<!--MODIFYING MAIN CODE-->
+
+<mod:findName type="event" name="STORAGE_CHECK_MODULAR">
+	<mod-append:choice req="HEKTAR_MODULAR_DRONES_LASERS" blue="false" hidden="true">																																							:choice req="HEKTAR_MODULAR_DRONE_LASERS" blue="false" hidden="true">
+		<text>Configure a Modular Laser Drone.</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER"/>
+	</mod-append:choice>
+	<mod-append:choice req="HEKTAR_MODULAR_DRONES_BEAMS" blue="false" hidden="true">
+		<text>Configure a Modular Beam Drone.</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM"/>
+	</mod-append:choice>
+	<mod-append:choice req="HEKTAR_MODULAR_DRONES_IONS" blue="false" hidden="true">
+		<text>Configure a Modular Ion Drone.</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION"/>
+	</mod-append:choice>
+</mod:findName>
+
+<!--ADDING CODE-->
+<!--DRONE_LASER-->
+
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER">
+	<text>Which weapon would you like to configure?</text>
+	<checkCargo/>
+	<choice req="MODULAR_DRONE_LASER_BASE" blue="false" hidden="true">
+		<text>Configure your Laser [No Modules]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_BASE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_BASE_BIO" blue="false" hidden="true">
+		<text>Configure your Laser [Anti-Bio Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_BASE_BIO"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_BASE_COOLDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Cooldown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_BASE_COOLDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_BASE_LOCKDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Lockdown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_BASE_LOCKDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_BASE_PIERCE" blue="false" hidden="true">
+		<text>Configure your Laser [Pierce Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_BASE_PIERCE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_BASE_STUN" blue="false" hidden="true">
+		<text>Configure your Laser [Stun Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_BASE_STUN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_ACCURACY" blue="false" hidden="true">
+		<text>Configure your Laser [Accuracy Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_ACCURACY"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_ACCURACY_BIO" blue="false" hidden="true">
+		<text>Configure your Laser [Accuracy Module, Anti-Bio Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_ACCURACY_BIO"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_ACCURACY_COOLDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Accuracy Module, Cooldown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_ACCURACY_COOLDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_ACCURACY_LOCKDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Accuracy Module, Lockdown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_ACCURACY_LOCKDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_ACCURACY_PIERCE" blue="false" hidden="true">
+		<text>Configure your Laser [Accuracy Module, Pierce Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_ACCURACY_PIERCE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_ACCURACY_STUN" blue="false" hidden="true">
+		<text>Configure your Laser [Accuracy Module, Stun Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_ACCURACY_STUN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_FIRE" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_FIRE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_FIRE_BIO" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module, Anti-Bio Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_FIRE_BIO"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_FIRE_COOLDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module, Cooldown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_FIRE_COOLDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_FIRE_LOCKDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module, Lockdown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_FIRE_LOCKDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_FIRE_PIERCE" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module, Pierce Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_FIRE_PIERCE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_FIRE_STUN" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module, Stun Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_FIRE_STUN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_HULL" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_HULL"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_HULL_BIO" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module, Anti-Bio Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_HULL_BIO"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_HULL_COOLDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module, Cooldown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_HULL_COOLDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_HULL_LOCKDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module, Lockdown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_HULL_LOCKDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_HULL_PIERCE" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module, Pierce Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_HULL_PIERCE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_HULL_STUN" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module, Stun Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_HULL_STUN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_POWER" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_POWER"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_POWER_BIO" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module, Anti-Bio Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_POWER_BIO"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_POWER_COOLDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module, Cooldown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_POWER_COOLDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_POWER_LOCKDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module, Lockdown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_POWER_LOCKDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_POWER_PIERCE" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module, Pierce Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_POWER_PIERCE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_LASER_POWER_STUN" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module, Stun Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_LASER_POWER_STUN"/>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+
+<!--base-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_BASE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [no modules]</text>
+	<choice hidden="true" req="MODULE_BIO" blue="false">
+		<text>Install the Anti-Bio Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_BIO"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_BASE_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_COOLDOWN" blue="false">
+		<text>Install the Cooldown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_COOLDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_BASE_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_LOCKDOWN" blue="false">
+		<text>Install the Lockdown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_LOCKDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_BASE_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_PIERCE" blue="false">
+		<text>Install the Pierce Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_PIERCE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_BASE_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_STUN" blue="false">
+		<text>Install the Neural Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_STUN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_BASE_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_ACCURACY"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--base bio-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_BASE_BIO">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Anti-Bio Module]</text>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_FIRE_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_HULL_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_ACCURACY_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_POWER_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--base cooldown-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_BASE_COOLDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Cooldown Module]</text>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_FIRE_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_HULL_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_ACCURACY_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_POWER_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--base lockdown-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_BASE_LOCKDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Lockdown Module]</text>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_FIRE_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_HULL_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_ACCURACY_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_POWER_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--base pierce-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_BASE_PIERCE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Pierce Module]</text>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_FIRE_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_HULL_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_ACCURACY_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_POWER_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--base stun-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_BASE_STUN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Stun Module]</text>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_FIRE_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_HULL_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_ACCURACY_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_POWER_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_BASE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--accuracy-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_ACCURACY">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Accuracy Module]</text>
+	<choice hidden="true" req="MODULE_BIO" blue="false">
+		<text>Install the Anti-Bio Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_ACCURACY"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_BIO"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_ACCURACY_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_COOLDOWN" blue="false">
+		<text>Install the Cooldown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_ACCURACY"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_COOLDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_ACCURACY_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_LOCKDOWN" blue="false">
+		<text>Install the Lockdown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_ACCURACY"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_LOCKDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_ACCURACY_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_PIERCE" blue="false">
+		<text>Install the Pierce Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_ACCURACY"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_PIERCE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_ACCURACY_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_STUN" blue="false">
+		<text>Install the Neural Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_ACCURACY"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_STUN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_ACCURACY_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_ACCURACY"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_ACCURACY"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_ACCURACY_BIO">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Accuracy Module, Anti-Bio Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_ACCURACY_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_ACCURACY"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_BIO"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_ACCURACY_COOLDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Accuracy Module, Cooldown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_ACCURACY_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_ACCURACY"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_COOLDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_ACCURACY_LOCKDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Accuracy Module, Lockdown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_ACCURACY_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_ACCURACY"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_LOCKDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_ACCURACY_PIERCE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Accuracy Module, Pierce Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_ACCURACY_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_ACCURACY"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_PIERCE"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_ACCURACY_STUN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Accuracy Module, Stun Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_ACCURACY_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_ACCURACY"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_STUN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--fire-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_FIRE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module]</text>
+	<choice hidden="true" req="MODULE_BIO" blue="false">
+		<text>Install the Anti-Bio Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_BIO"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_FIRE_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_COOLDOWN" blue="false">
+		<text>Install the Cooldown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_COOLDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_FIRE_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_LOCKDOWN" blue="false">
+		<text>Install the Lockdown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_LOCKDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_FIRE_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_PIERCE" blue="false">
+		<text>Install the Pierce Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_PIERCE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_FIRE_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_STUN" blue="false">
+		<text>Install the Neural Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_STUN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_FIRE_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_FIRE_BIO">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module, Anti-Bio Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_FIRE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_BIO"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_FIRE_COOLDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module, Cooldown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_FIRE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_COOLDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_FIRE_LOCKDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module, Lockdown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_FIRE_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_LOCKDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_FIRE_PIERCE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module, Pierce Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_FIRE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_PIERCE"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_FIRE_STUN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module, Stun Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_FIRE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_STUN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--hull-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_HULL">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module]</text>
+	<choice hidden="true" req="MODULE_BIO" blue="false">
+		<text>Install the Anti-Bio Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_BIO"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_HULL_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_COOLDOWN" blue="false">
+		<text>Install the Cooldown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_COOLDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_HULL_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_LOCKDOWN" blue="false">
+		<text>Install the Lockdown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_LOCKDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_HULL_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_PIERCE" blue="false">
+		<text>Install the Pierce Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_PIERCE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_HULL_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_STUN" blue="false">
+		<text>Install the Neural Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_STUN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_HULL_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_HULL_BIO">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module, Anti-Bio Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_HULL_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_BIO"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_HULL_COOLDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module, Cooldown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_HULL_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_COOLDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_HULL_LOCKDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module, Lockdown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_HULL_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_LOCKDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_HULL_PIERCE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module, Pierce Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_HULL_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_PIERCE"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_HULL_STUN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module, Stun Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_HULL_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_STUN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--power-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_POWER">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module]</text>
+	<choice hidden="true" req="MODULE_BIO" blue="false">
+		<text>Install the Anti-Bio Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_BIO"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_POWER_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_COOLDOWN" blue="false">
+		<text>Install the Cooldown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_COOLDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_POWER_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_LOCKDOWN" blue="false">
+		<text>Install the Lockdown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_LOCKDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_POWER_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_PIERCE" blue="false">
+		<text>Install the Pierce Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_PIERCE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_POWER_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_STUN" blue="false">
+		<text>Install the Neural Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_STUN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_LASER_POWER_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_POWER_BIO">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module, Anti-Bio Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_POWER_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_BIO"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_POWER_COOLDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module, Cooldown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_POWER_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_COOLDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_POWER_LOCKDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module, Lockdown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_POWER_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_LOCKDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_POWER_PIERCE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module, Pierce Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_POWER_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_PIERCE"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_LASER_POWER_STUN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module, Stun Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_LASER_POWER_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_LASER_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_STUN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+
+<!--DRONE_BEAM-->
+
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM">
+	<text>Which weapon would you like to configure?</text>
+	<checkCargo/>
+	<choice req="MODULAR_DRONE_BEAM_BASE" blue="false" hidden="true">
+		<text>Configure your Laser [No Modules]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_BASE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_BASE_BIO" blue="false" hidden="true">
+		<text>Configure your Laser [Anti-Bio Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_BASE_BIO"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_BASE_COOLDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Cooldown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_BASE_COOLDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_BASE_PIERCE" blue="false" hidden="true">
+		<text>Configure your Laser [Pierce Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_BASE_PIERCE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_BASE_STUN" blue="false" hidden="true">
+		<text>Configure your Laser [Stun Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_BASE_STUN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_FIRE" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_FIRE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_FIRE_BIO" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module, Anti-Bio Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_FIRE_BIO"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_FIRE_COOLDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module, Cooldown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_FIRE_COOLDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_FIRE_PIERCE" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module, Pierce Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_FIRE_PIERCE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_FIRE_STUN" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module, Stun Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_FIRE_STUN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_HULL" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_HULL"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_HULL_BIO" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module, Anti-Bio Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_HULL_BIO"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_HULL_COOLDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module, Cooldown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_HULL_COOLDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_HULL_PIERCE" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module, Pierce Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_HULL_PIERCE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_HULL_STUN" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module, Stun Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_HULL_STUN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_POWER" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_POWER"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_POWER_BIO" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module, Anti-Bio Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_POWER_BIO"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_POWER_COOLDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module, Cooldown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_POWER_COOLDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_POWER_PIERCE" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module, Pierce Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_POWER_PIERCE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_BEAM_POWER_STUN" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module, Stun Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_BEAM_POWER_STUN"/>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+
+<!--base-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_BASE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [no modules]</text>
+	<choice hidden="true" req="MODULE_BIO" blue="false">
+		<text>Install the Anti-Bio Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_BIO"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_BASE_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_COOLDOWN" blue="false">
+		<text>Install the Cooldown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_COOLDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_BASE_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_PIERCE" blue="false">
+		<text>Install the Pierce Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_PIERCE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_BASE_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_STUN" blue="false">
+		<text>Install the Neural Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_STUN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_BASE_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_ACCURACY"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--base bio-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_BASE_BIO">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Anti-Bio Module]</text>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_FIRE_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_HULL_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_ACCURACY_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_POWER_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--base cooldown-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_BASE_COOLDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Cooldown Module]</text>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_FIRE_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_HULL_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_ACCURACY_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_POWER_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--base pierce-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_BASE_PIERCE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Pierce Module]</text>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_FIRE_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_HULL_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_ACCURACY_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_POWER_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--base stun-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_BASE_STUN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Stun Module]</text>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_FIRE_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_HULL_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_ACCURACY_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_POWER_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_BASE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--fire-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_FIRE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module]</text>
+	<choice hidden="true" req="MODULE_BIO" blue="false">
+		<text>Install the Anti-Bio Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_BIO"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_FIRE_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_COOLDOWN" blue="false">
+		<text>Install the Cooldown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_COOLDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_FIRE_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_PIERCE" blue="false">
+		<text>Install the Pierce Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_PIERCE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_FIRE_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_STUN" blue="false">
+		<text>Install the Neural Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_STUN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_FIRE_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_FIRE_BIO">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module, Anti-Bio Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_FIRE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_BIO"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_FIRE_COOLDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module, Cooldown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_FIRE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_COOLDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_FIRE_PIERCE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module, Pierce Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_FIRE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_PIERCE"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_FIRE_STUN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module, Stun Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_FIRE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_STUN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--hull-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_HULL">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module]</text>
+	<choice hidden="true" req="MODULE_BIO" blue="false">
+		<text>Install the Anti-Bio Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_BIO"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_HULL_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_COOLDOWN" blue="false">
+		<text>Install the Cooldown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_COOLDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_HULL_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_PIERCE" blue="false">
+		<text>Install the Pierce Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_PIERCE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_HULL_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_STUN" blue="false">
+		<text>Install the Neural Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_STUN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_HULL_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_HULL_BIO">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module, Anti-Bio Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_HULL_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_BIO"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_HULL_COOLDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module, Cooldown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_HULL_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_COOLDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_HULL_PIERCE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module, Pierce Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_HULL_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_PIERCE"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_HULL_STUN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module, Stun Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_HULL_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_STUN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--power-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_POWER">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module]</text>
+	<choice hidden="true" req="MODULE_BIO" blue="false">
+		<text>Install the Anti-Bio Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_BIO"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_POWER_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_COOLDOWN" blue="false">
+		<text>Install the Cooldown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_COOLDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_POWER_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_PIERCE" blue="false">
+		<text>Install the Pierce Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_PIERCE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_POWER_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_STUN" blue="false">
+		<text>Install the Neural Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_STUN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_BEAM_POWER_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_POWER_BIO">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module, Anti-Bio Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_POWER_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_BIO"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_POWER_COOLDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module, Cooldown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_POWER_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_COOLDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_POWER_PIERCE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module, Pierce Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_POWER_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_PIERCE"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_BEAM_POWER_STUN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module, Stun Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_BEAM_POWER_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_BEAM_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_STUN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+
+<!--DRONE_BEAM-->
+
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION">
+	<text>Which weapon would you like to configure?</text>
+	<checkCargo/>
+	<choice req="MODULAR_DRONE_ION_BASE" blue="false" hidden="true">
+		<text>Configure your Laser [No Modules]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_BASE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_BASE_BIO" blue="false" hidden="true">
+		<text>Configure your Laser [Anti-Bio Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_BASE_BIO"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_BASE_COOLDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Cooldown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_BASE_COOLDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_BASE_LOCKDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Lockdown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_BASE_LOCKDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_BASE_PIERCE" blue="false" hidden="true">
+		<text>Configure your Laser [Pierce Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_BASE_PIERCE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_BASE_STUN" blue="false" hidden="true">
+		<text>Configure your Laser [Stun Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_BASE_STUN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_ACCURACY" blue="false" hidden="true">
+		<text>Configure your Laser [Accuracy Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_ACCURACY"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_ACCURACY_BIO" blue="false" hidden="true">
+		<text>Configure your Laser [Accuracy Module, Anti-Bio Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_ACCURACY_BIO"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_ACCURACY_COOLDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Accuracy Module, Cooldown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_ACCURACY_COOLDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_ACCURACY_LOCKDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Accuracy Module, Lockdown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_ACCURACY_LOCKDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_ACCURACY_PIERCE" blue="false" hidden="true">
+		<text>Configure your Laser [Accuracy Module, Pierce Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_ACCURACY_PIERCE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_ACCURACY_STUN" blue="false" hidden="true">
+		<text>Configure your Laser [Accuracy Module, Stun Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_ACCURACY_STUN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_FIRE" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_FIRE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_FIRE_BIO" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module, Anti-Bio Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_FIRE_BIO"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_FIRE_COOLDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module, Cooldown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_FIRE_COOLDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_FIRE_LOCKDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module, Lockdown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_FIRE_LOCKDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_FIRE_PIERCE" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module, Pierce Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_FIRE_PIERCE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_FIRE_STUN" blue="false" hidden="true">
+		<text>Configure your Laser [Firestarter Module, Stun Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_FIRE_STUN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_HULL" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_HULL"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_HULL_BIO" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module, Anti-Bio Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_HULL_BIO"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_HULL_COOLDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module, Cooldown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_HULL_COOLDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_HULL_LOCKDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module, Lockdown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_HULL_LOCKDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_HULL_PIERCE" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module, Pierce Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_HULL_PIERCE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_HULL_STUN" blue="false" hidden="true">
+		<text>Configure your Laser [Hullbuster Module, Stun Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_HULL_STUN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_POWER" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_POWER"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_POWER_BIO" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module, Anti-Bio Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_POWER_BIO"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_POWER_COOLDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module, Cooldown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_POWER_COOLDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_POWER_LOCKDOWN" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module, Lockdown Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_POWER_LOCKDOWN"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_POWER_PIERCE" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module, Pierce Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_POWER_PIERCE"/>
+	</choice>
+	<choice req="MODULAR_DRONE_ION_POWER_STUN" blue="false" hidden="true">
+		<text>Configure your Laser [Power Module, Stun Module]</text>
+		<event load="STORAGE_CHECK_MODULAR_DRONE_ION_POWER_STUN"/>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+
+<!--base-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_BASE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [no modules]</text>
+	<choice hidden="true" req="MODULE_BIO" blue="false">
+		<text>Install the Anti-Bio Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_BIO"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_BASE_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_COOLDOWN" blue="false">
+		<text>Install the Cooldown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_COOLDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_BASE_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_LOCKDOWN" blue="false">
+		<text>Install the Lockdown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_LOCKDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_BASE_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_PIERCE" blue="false">
+		<text>Install the Pierce Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_PIERCE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_BASE_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_STUN" blue="false">
+		<text>Install the Neural Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_STUN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_BASE_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_ACCURACY"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--base bio-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_BASE_BIO">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Anti-Bio Module]</text>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_FIRE_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_HULL_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_ACCURACY_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_POWER_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--base cooldown-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_BASE_COOLDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Cooldown Module]</text>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_FIRE_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_HULL_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_ACCURACY_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_POWER_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--base lockdown-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_BASE_LOCKDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Lockdown Module]</text>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_FIRE_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_HULL_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_ACCURACY_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_POWER_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--base pierce-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_BASE_PIERCE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Pierce Module]</text>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_FIRE_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_HULL_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_ACCURACY_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_POWER_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--base stun-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_BASE_STUN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Stun Module]</text>
+	<choice hidden="true" req="MODULE_FIRE" blue="false">
+		<text>Install the Firestarter Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_FIRE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_FIRE_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_HULL" blue="false">
+		<text>Install the Hullbuster Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_HULL"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_HULL_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_ACCURACY" blue="false">
+		<text>Install the Accuracy Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_ACCURACY"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_ACCURACY_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_POWER" blue="false">
+		<text>Install the Power Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_POWER"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_POWER_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_BASE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--accuracy-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_ACCURACY">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Accuracy Module]</text>
+	<choice hidden="true" req="MODULE_BIO" blue="false">
+		<text>Install the Anti-Bio Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_ACCURACY"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_BIO"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_ACCURACY_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_COOLDOWN" blue="false">
+		<text>Install the Cooldown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_ACCURACY"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_COOLDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_ACCURACY_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_LOCKDOWN" blue="false">
+		<text>Install the Lockdown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_ACCURACY"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_LOCKDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_ACCURACY_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_PIERCE" blue="false">
+		<text>Install the Pierce Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_ACCURACY"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_PIERCE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_ACCURACY_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_STUN" blue="false">
+		<text>Install the Neural Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_ACCURACY"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_STUN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_ACCURACY_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_ACCURACY"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_ACCURACY"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_ACCURACY_BIO">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Accuracy Module, Anti-Bio Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_ACCURACY_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_ACCURACY"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_BIO"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_ACCURACY_COOLDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Accuracy Module, Cooldown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_ACCURACY_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_ACCURACY"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_COOLDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_ACCURACY_LOCKDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Accuracy Module, Lockdown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_ACCURACY_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_ACCURACY"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_LOCKDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_ACCURACY_PIERCE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Accuracy Module, Pierce Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_ACCURACY_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_ACCURACY"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_PIERCE"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_ACCURACY_STUN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Accuracy Module, Stun Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_ACCURACY_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_ACCURACY"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_STUN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--fire-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_FIRE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module]</text>
+	<choice hidden="true" req="MODULE_BIO" blue="false">
+		<text>Install the Anti-Bio Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_BIO"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_FIRE_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_COOLDOWN" blue="false">
+		<text>Install the Cooldown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_COOLDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_FIRE_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_LOCKDOWN" blue="false">
+		<text>Install the Lockdown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_LOCKDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_FIRE_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_PIERCE" blue="false">
+		<text>Install the Pierce Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_PIERCE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_FIRE_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_STUN" blue="false">
+		<text>Install the Neural Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_STUN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_FIRE_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_FIRE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_FIRE_BIO">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module, Anti-Bio Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_FIRE_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_BIO"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_FIRE_COOLDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module, Cooldown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_FIRE_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_COOLDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_FIRE_LOCKDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module, Lockdown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_FIRE_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_LOCKDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_FIRE_PIERCE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module, Pierce Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_FIRE_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_PIERCE"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_FIRE_STUN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Firestarter Module, Stun Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_FIRE_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_FIRE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_STUN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--hull-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_HULL">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module]</text>
+	<choice hidden="true" req="MODULE_BIO" blue="false">
+		<text>Install the Anti-Bio Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_BIO"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_HULL_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_COOLDOWN" blue="false">
+		<text>Install the Cooldown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_COOLDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_HULL_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_LOCKDOWN" blue="false">
+		<text>Install the Lockdown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_LOCKDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_HULL_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_PIERCE" blue="false">
+		<text>Install the Pierce Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_PIERCE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_HULL_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_STUN" blue="false">
+		<text>Install the Neural Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_STUN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_HULL_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_HULL"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_HULL_BIO">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module, Anti-Bio Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_HULL_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_BIO"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_HULL_COOLDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module, Cooldown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_HULL_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_COOLDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_HULL_LOCKDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module, Lockdown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_HULL_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_LOCKDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_HULL_PIERCE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module, Pierce Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_HULL_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_PIERCE"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_HULL_STUN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Hullbuster Module, Stun Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_HULL_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_HULL"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_STUN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<!--power-->
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_POWER">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module]</text>
+	<choice hidden="true" req="MODULE_BIO" blue="false">
+		<text>Install the Anti-Bio Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_BIO"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_POWER_BIO"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_COOLDOWN" blue="false">
+		<text>Install the Cooldown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_COOLDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_POWER_COOLDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_LOCKDOWN" blue="false">
+		<text>Install the Lockdown Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_LOCKDOWN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_POWER_LOCKDOWN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_PIERCE" blue="false">
+		<text>Install the Pierce Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_PIERCE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_POWER_PIERCE"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="MODULE_STUN" blue="false">
+		<text>Install the Neural Module.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<remove name="MODULE_STUN"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<drone name="MODULAR_DRONE_ION_POWER_STUN"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Detach the modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_POWER"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_POWER_BIO">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module, Anti-Bio Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_POWER_BIO"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_BIO"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_POWER_COOLDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module, Cooldown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_POWER_COOLDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_COOLDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_POWER_LOCKDOWN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module, Lockdown Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_POWER_LOCKDOWN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_LOCKDOWN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_POWER_PIERCE">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module, Pierce Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_POWER_PIERCE"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_PIERCE"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>
+<event name="STORAGE_CHECK_MODULAR_DRONE_ION_POWER_STUN">
+	<checkCargo/>
+	<text>Currently configuring Modular Laser. [Power Module, Stun Module]</text>
+	<choice hidden="true">
+		<text>Detach both modules.</text>
+		<event>
+			<text>...</text>
+			<remove name="MODULAR_DRONE_ION_POWER_STUN"/>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>...</text>
+					<drone name="MODULAR_DRONE_ION_BASE"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>...</text>
+							<weapon name="MODULE_POWER"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>...</text>
+									<weapon name="MODULE_STUN"/>
+									<choice hidden="true">
+										<text>Continue...</text>
+										<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_MODULAR_LOAD"/>
+	</choice>
+</event>

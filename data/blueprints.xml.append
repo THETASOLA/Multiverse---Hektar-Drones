@@ -1,0 +1,5184 @@
+
+<mod:findName type="weaponBlueprint" name="MODULE_ACCURACY">
+	<mod-append:desc>Hektar Industries(TM) brand Attribute Accuracy Module. Ensure your weaponry stays on target on the battlefield!
+	Incompatible with the Modular Beam.
+	Laser/Ion Effects: +20% accuracy buff
+	Missile Effects: +100% accuracy buff</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_BIO">
+	<mod-append:desc>Hektar Industries(TM) brand Status RAD Module. Turn your modular weapons into the perfect anti-crew weaponry!
+	No incompatibilities. When combined with the Hullbuster Module, will restore hull and system damage, but will not have hull bust properties.
+	Laser Effects: 0 hull/system dmg, +30 crew damage (+60 for drone), +1 shield pierce
+	Beam Effects: 0 hull dmg (system dmg is preserved), +60 crew damage (+90 for drone), +1 shield pierce
+	Missile Effects: 0 hull/system dmg, +90 crew damage
+	Ion Effects: +60 crew damage (+90 for drone) (must be a direct hit)
+	Weapons and drones also gain standard Anti-Bio crew debuffs. (66% slowed speed and repairs, 75% increased stun duration)</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_COOLDOWN">
+	<mod-append:desc>Hektar Industries(TM) brand Status Cooldown Module. Turn your modular weapons into power efficient fast firing assault weaponry!
+	No incompatibilities.
+	Effects for all weapons: Reduces cooldown by 25%
+    Effects for all drones: Increase speed by 50%</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_LOCKDOWN">
+	<mod-append:desc>Hektar Industries(TM) brand Status Lockdown Module. Turn your modular weapons into the next generation of tech and cause chaos on the enemy ship with patented lockdown tech!
+	Incompatible with the Modular Beam.
+	Effects for all weapons: Applies lockdown on impact</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_PIERCE">
+	<mod-append:desc>Hektar Industries(TM) brand Status Pierce Module. Never deal with enemy fortifications ever again!
+	Incompatible with the Modular Missile.
+	Laser/Beam Effects: +1 shield pierce, +30% breach chance
+	Ion Effects: +3 (+10 for drone) shield pierce (affects shield as it passes through)</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_STUN">
+	<mod-append:desc>Hektar Industries(TM) brand Status Neural Module. Turn your modular weapons into crew disrupting neural weaponry!
+	No incompatibilities.
+	Laser Effects: Projectiles apply 12 seconds of stun (projectiles do not stack the duration)
+	Beam Effects: Beam applies 18 seconds of stun
+	Missile Effects: Missile applies 14 seconds of stun
+	Ion Effects: Ion applies stun equal to ion duration +2s (25s for drone)</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_FIRE">
+	<mod-append:desc>Hektar Industries(TM) brand Attribute Firestarter Module. Create devastating infernos with your modular weaponry!
+	No incompatibilities.
+	Laser Effects: +30% fire chance
+	Beam Effects: +40% fire chance
+	Missile Effects: +100% fire chance
+	Ion Effects: +100% fire chance (50% for drone)</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_HULL">
+	<mod-append:desc>Hektar Industries(TM) brand Attribute Hullbust Module. Decimate the enemy's hull with heavy hitting modular weaponry!
+	No incompatibilities. When combined with the RAD module, will return to default hull damage but will not have hull bust properties.
+	Laser/Beam/Missile Effects: x2 damage on systemless rooms, +10% breach chance. [Breach stacks with Pierce Module breach chance]
+	Missile Effects: Increases cooldown by 2s.
+	Ion Effects: Ion becomes Energy; hull damage equals ion damage (but no system/crew damage), +10% fire chance</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_POWER">
+	<mod-append:desc>Hektar Industries(TM) brand Attribute Power Module. Get more bang for your buck with your modular weaponry!
+	Laser Effects: +2 projectiles, +1 power cost, +4s cooldown (for drone: +1 damage, +1 power cost)
+	Beam Effects: +60 beam length, doubled beam speed, +30% breach chance, +1 power cost 
+	[Breach stacks with Pierce Module breach chance]
+	Missile Effects: +1 damage, +1 power cost
+	Ion Effects: +1 ion damage, +1 power cost</mod-append:desc>
+</mod:findName>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_BASE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_base</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_BASE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_BASE_PIERCE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Status - Pierce
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_base_pierce</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_BASE_PIERCE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_BASE_BIO">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Status - Bio
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_base_bio</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_BASE_BIO</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_BASE_COOLDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Status - Cooldown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>22</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_base_cooldown</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_BASE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_BASE_LOCKDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Status - Lockdown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_base_lockdown</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_BASE_LOCKDOWN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_BASE_STUN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Status - Stun
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_base_stun</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_BASE_STUN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_ACCURACY">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_accuracy</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_ACCURACY</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_FIRE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_fire</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_FIRE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_HULL">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_hull</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_HULL</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_POWER">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_power</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_POWER</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_ACCURACY_PIERCE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+Status - Pierce
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_accuracy_pierce</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_ACCURACY_PIERCE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_ACCURACY_BIO">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+Status - Bio
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_accuracy_bio</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_ACCURACY_BIO</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_ACCURACY_COOLDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+Status - Cooldown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>22</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_accuracy_cooldown</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_ACCURACY</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_ACCURACY_LOCKDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+Status - Lockdown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_accuracy_lockdown</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_ACCURACY_LOCKDOWN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_ACCURACY_STUN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+Status - Stun
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_accuracy_stun</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_ACCURACY_STUN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_FIRE_PIERCE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+Status - Pierce
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_fire_pierce</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_FIRE_PIERCE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_FIRE_BIO">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+Status - Bio
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_fire_bio</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_FIRE_BIO</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_FIRE_COOLDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+Status - Cooldown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>22</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_fire_cooldown</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_FIRE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_FIRE_LOCKDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+Status - Lockdown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_fire_lockdown</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_FIRE_LOCKDOWN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_FIRE_STUN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+Status - Stun
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_fire_stun</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_FIRE_STUN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_HULL_PIERCE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+Status - Pierce
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_hull_pierce</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_HULL_PIERCE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_HULL_BIO">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+Status - Bio
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_hull_bio</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_HULL_BIO</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_HULL_COOLDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+Status - Cooldown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>22</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_hull_cooldown</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_HULL</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_HULL_LOCKDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+Status - Lockdown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_hull_lockdown</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_HULL_LOCKDOWN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_HULL_STUN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+Status - Stun
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_hull_stun</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_HULL_STUN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_POWER_PIERCE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+Status - Pierce
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_power_pierce</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_POWER_PIERCE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_POWER_BIO">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+Status - Bio
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_power_bio</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_POWER_BIO</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_POWER_COOLDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+Status - Cooldown
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>22</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_power_cooldown</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_POWER</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_POWER_LOCKDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+Status - Lockdown
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_power_lockdown</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_POWER_LOCKDOWN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_POWER_STUN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+Status - Stun
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_power_stun</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_POWER_STUN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+
+<mod:findName type="weaponBlueprint" name="MODULE_ACCURACY">
+	<mod-append:desc>Hektar Industries(TM) brand Attribute Accuracy Module. Ensure your weaponry stays on target on the battlefield!
+	Incompatible with the Modular Beam.
+	Laser/Ion Effects: +20% accuracy buff
+	Missile Effects: +100% accuracy buff</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_BIO">
+	<mod-append:desc>Hektar Industries(TM) brand Status RAD Module. Turn your modular weapons into the perfect anti-crew weaponry!
+	No incompatibilities. When combined with the Hullbuster Module, will restore hull and system damage, but will not have hull bust properties.
+	Laser Effects: 0 hull/system dmg, +30 crew damage (+60 for drone), +1 shield pierce
+	Beam Effects: 0 hull dmg (system dmg is preserved), +60 crew damage (+90 for drone), +1 shield pierce
+	Missile Effects: 0 hull/system dmg, +90 crew damage
+	Ion Effects: +60 crew damage (+90 for drone) (must be a direct hit)
+	Weapons and drones also gain standard Anti-Bio crew debuffs. (66% slowed speed and repairs, 75% increased stun duration)</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_COOLDOWN">
+	<mod-append:desc>Hektar Industries(TM) brand Status Cooldown Module. Turn your modular weapons into power efficient fast firing assault weaponry!
+	No incompatibilities.
+	Effects for all weapons: Reduces cooldown by 25%
+    Effects for all drones: Increase speed by 50%</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_LOCKDOWN">
+	<mod-append:desc>Hektar Industries(TM) brand Status Lockdown Module. Turn your modular weapons into the next generation of tech and cause chaos on the enemy ship with patented lockdown tech!
+	Incompatible with the Modular Beam.
+	Effects for all weapons: Applies lockdown on impact</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_PIERCE">
+	<mod-append:desc>Hektar Industries(TM) brand Status Pierce Module. Never deal with enemy fortifications ever again!
+	Incompatible with the Modular Missile.
+	Laser/Beam Effects: +1 shield pierce, +30% breach chance
+	Ion Effects: +3 (+10 for drone) shield pierce (affects shield as it passes through)</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_STUN">
+	<mod-append:desc>Hektar Industries(TM) brand Status Neural Module. Turn your modular weapons into crew disrupting neural weaponry!
+	No incompatibilities.
+	Laser Effects: Projectiles apply 12 seconds of stun (projectiles do not stack the duration)
+	Beam Effects: Beam applies 18 seconds of stun
+	Missile Effects: Missile applies 14 seconds of stun
+	Ion Effects: Ion applies stun equal to ion duration +2s (25s for drone)</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_FIRE">
+	<mod-append:desc>Hektar Industries(TM) brand Attribute Firestarter Module. Create devastating infernos with your modular weaponry!
+	No incompatibilities.
+	Laser Effects: +30% fire chance
+	Beam Effects: +40% fire chance
+	Missile Effects: +100% fire chance
+	Ion Effects: +100% fire chance (50% for drone)</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_HULL">
+	<mod-append:desc>Hektar Industries(TM) brand Attribute Hullbust Module. Decimate the enemy's hull with heavy hitting modular weaponry!
+	No incompatibilities. When combined with the RAD module, will return to default hull damage but will not have hull bust properties.
+	Laser/Beam/Missile Effects: x2 damage on systemless rooms, +10% breach chance. [Breach stacks with Pierce Module breach chance]
+	Missile Effects: Increases cooldown by 2s.
+	Ion Effects: Ion becomes Energy; hull damage equals ion damage (but no system/crew damage), +10% fire chance</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_POWER">
+	<mod-append:desc>Hektar Industries(TM) brand Attribute Power Module. Get more bang for your buck with your modular weaponry!
+	Laser Effects: +2 projectiles, +1 power cost, +4s cooldown (for drone: +1 damage, +1 power cost)
+	Beam Effects: +60 beam length, doubled beam speed, +30% breach chance, +1 power cost 
+	[Breach stacks with Pierce Module breach chance]
+	Missile Effects: +1 damage, +1 power cost
+	Ion Effects: +1 ion damage, +1 power cost</mod-append:desc>
+</mod:findName>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_BASE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Beam. It supports 1 attribute module and 1 status module.
+Incompatible with the accuracy and lockdown module.</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_base</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_BASE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_BASE_PIERCE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Status - Pierce
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_base_pierce</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_BASE_PIERCE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_BASE_BIO">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Status - Bio
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_base_bio</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_BASE_BIO</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_BASE_COOLDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Status - Cooldown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>18</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_base_cooldown</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_BASE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_BASE_LOCKDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Status - Lockdown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_base_lockdown</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_BASE_LOCKDOWN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_BASE_STUN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Status - Stun
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_base_stun</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_BASE_STUN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_ACCURACY">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_accuracy</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_ACCURACY</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_FIRE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_fire</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_FIRE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_HULL">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_hull</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_HULL</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_POWER">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_power</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_POWER</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_ACCURACY_PIERCE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+Status - Pierce
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_accuracy_pierce</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_ACCURACY_PIERCE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_ACCURACY_BIO">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+Status - Bio
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_accuracy_bio</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_ACCURACY_BIO</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_ACCURACY_COOLDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+Status - Cooldown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>22</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_accuracy_cooldown</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_ACCURACY</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_ACCURACY_LOCKDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+Status - Lockdown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_accuracy_lockdown</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_ACCURACY_LOCKDOWN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_ACCURACY_STUN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+Status - Stun
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_accuracy_stun</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_ACCURACY_STUN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_FIRE_PIERCE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+Status - Pierce
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_fire_pierce</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_FIRE_PIERCE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_FIRE_BIO">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+Status - Bio
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_fire_bio</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_FIRE_BIO</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_FIRE_COOLDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+Status - Cooldown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>18</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_fire_cooldown</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_FIRE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_FIRE_LOCKDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+Status - Lockdown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_fire_lockdown</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_FIRE_LOCKDOWN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_FIRE_STUN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+Status - Stun
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_fire_stun</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_FIRE_STUN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_HULL_PIERCE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+Status - Pierce
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_hull_pierce</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_HULL_PIERCE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_HULL_BIO">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+Status - Bio
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_hull_bio</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_HULL_BIO</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_HULL_COOLDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+Status - Cooldown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>18</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_hull_cooldown</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_HULL</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_HULL_LOCKDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+Status - Lockdown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_hull_lockdown</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_HULL_LOCKDOWN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_HULL_STUN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+Status - Stun
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_hull_stun</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_HULL_STUN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_POWER_PIERCE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+Status - Pierce
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_power_pierce</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_POWER_PIERCE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_POWER_BIO">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+Status - Bio
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_power_bio</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_POWER_BIO</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_POWER_COOLDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+Status - Cooldown
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>18</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_power_cooldown</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_POWER</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_LASER_POWER_LOCKDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Laser Drone</title>
+  <short>Mod. Laser</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+Status - Lockdown
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>14</speed>
+  <cost>63</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_laser_power_lockdown</droneImage>
+  <image>weapons/laser_light2_strip4.png</image>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_LASER_POWER_LOCKDOWN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat2</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_BEAM_POWER_STUN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Beam Drone</title>
+  <short>Mod. Beam</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+Status - Stun
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>65</cost>
+  <bp>3</bp>
+  <droneImage>modular_drone_beam_power_stun</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_BEAM_POWER_STUN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+
+<mod:findName type="weaponBlueprint" name="MODULE_ACCURACY">
+	<mod-append:desc>Hektar Industries(TM) brand Attribute Accuracy Module. Ensure your weaponry stays on target on the battlefield!
+	Incompatible with the Modular Beam.
+	Laser/Ion Effects: +20% accuracy buff
+	Missile Effects: +100% accuracy buff</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_BIO">
+	<mod-append:desc>Hektar Industries(TM) brand Status RAD Module. Turn your modular weapons into the perfect anti-crew weaponry!
+	No incompatibilities. When combined with the Hullbuster Module, will restore hull and system damage, but will not have hull bust properties.
+	Laser Effects: 0 hull/system dmg, +30 crew damage (+60 for drone), +1 shield pierce
+	Beam Effects: 0 hull dmg (system dmg is preserved), +60 crew damage (+90 for drone), +1 shield pierce
+	Missile Effects: 0 hull/system dmg, +90 crew damage
+	Ion Effects: +60 crew damage (+90 for drone) (must be a direct hit)
+	Weapons and drones also gain standard Anti-Bio crew debuffs. (66% slowed speed and repairs, 75% increased stun duration)</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_COOLDOWN">
+	<mod-append:desc>Hektar Industries(TM) brand Status Cooldown Module. Turn your modular weapons into power efficient fast firing assault weaponry!
+	No incompatibilities.
+	Effects for all weapons: Reduces cooldown by 25%
+    Effects for all drones: Increase speed by 50%</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_LOCKDOWN">
+	<mod-append:desc>Hektar Industries(TM) brand Status Lockdown Module. Turn your modular weapons into the next generation of tech and cause chaos on the enemy ship with patented lockdown tech!
+	Incompatible with the Modular Beam.
+	Effects for all weapons: Applies lockdown on impact</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_PIERCE">
+	<mod-append:desc>Hektar Industries(TM) brand Status Pierce Module. Never deal with enemy fortifications ever again!
+	Incompatible with the Modular Missile.
+	Laser/Beam Effects: +1 shield pierce, +30% breach chance
+	Ion Effects: +3 (+10 for drone) shield pierce (affects shield as it passes through)</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_STUN">
+	<mod-append:desc>Hektar Industries(TM) brand Status Neural Module. Turn your modular weapons into crew disrupting neural weaponry!
+	No incompatibilities.
+	Laser Effects: Projectiles apply 12 seconds of stun (projectiles do not stack the duration)
+	Beam Effects: Beam applies 18 seconds of stun
+	Missile Effects: Missile applies 14 seconds of stun
+	Ion Effects: Ion applies stun equal to ion duration +2s (25s for drone)</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_FIRE">
+	<mod-append:desc>Hektar Industries(TM) brand Attribute Firestarter Module. Create devastating infernos with your modular weaponry!
+	No incompatibilities.
+	Laser Effects: +30% fire chance
+	Beam Effects: +40% fire chance
+	Missile Effects: +100% fire chance
+	Ion Effects: +100% fire chance (50% for drone)</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_HULL">
+	<mod-append:desc>Hektar Industries(TM) brand Attribute Hullbust Module. Decimate the enemy's hull with heavy hitting modular weaponry!
+	No incompatibilities. When combined with the RAD module, will return to default hull damage but will not have hull bust properties.
+	Laser/Beam/Missile Effects: x2 damage on systemless rooms, +10% breach chance. [Breach stacks with Pierce Module breach chance]
+	Missile Effects: Increases cooldown by 2s.
+	Ion Effects: Ion becomes Energy; hull damage equals ion damage (but no system/crew damage), +10% fire chance</mod-append:desc>
+</mod:findName>
+
+<mod:findName type="weaponBlueprint" name="MODULE_POWER">
+	<mod-append:desc>Hektar Industries(TM) brand Attribute Power Module. Get more bang for your buck with your modular weaponry!
+	Laser Effects: +2 projectiles, +1 power cost, +4s cooldown (for drone: +1 damage, +1 power cost)
+	Beam Effects: +60 beam length, doubled beam speed, +30% breach chance, +1 power cost 
+	[Breach stacks with Pierce Module breach chance]
+	Missile Effects: +1 damage, +1 power cost
+	Ion Effects: +1 ion damage, +1 power cost</mod-append:desc>
+</mod:findName>
+
+<droneBlueprint name="MODULAR_DRONE_ION_BASE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Ion. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_base</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_BASE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_BASE_PIERCE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Status - Pierce
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_base_pierce</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_BASE_PIERCE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_BASE_BIO">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Status - Bio
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_base_bio</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_BASE_BIO</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_BASE_COOLDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Status - Cooldown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_base_cooldown</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_BASE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_BASE_LOCKDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Status - Lockdown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_base_lockdown</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_BASE_LOCKDOWN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_BASE_STUN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Status - Stun
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_base_stun</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_BASE_STUN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_ACCURACY">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_accuracy</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_ACCURACY</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_FIRE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_fire</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_FIRE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_HULL">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_hull</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_HULL</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_POWER">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_power</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_POWER</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_ACCURACY_PIERCE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+Status - Pierce
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_accuracy_pierce</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_ACCURACY_PIERCE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_ACCURACY_BIO">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+Status - Bio
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_accuracy_bio</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_ACCURACY_BIO</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_ACCURACY_COOLDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+Status - Cooldown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_accuracy_cooldown</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_ACCURACY</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_ACCURACY_LOCKDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+Status - Lockdown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_accuracy_lockdown</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_ACCURACY_LOCKDOWN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_ACCURACY_STUN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Accuracy
+Status - Stun
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_accuracy_stun</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_ACCURACY_STUN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_FIRE_PIERCE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+Status - Pierce
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_fire_pierce</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_FIRE_PIERCE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_FIRE_BIO">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+Status - Bio
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_fire_bio</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_FIRE_BIO</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_FIRE_COOLDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+Status - Cooldown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_fire_cooldown</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_FIRE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_FIRE_LOCKDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+Status - Lockdown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_fire_lockdown</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_FIRE_LOCKDOWN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_FIRE_STUN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Fire
+Status - Stun
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_fire_stun</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_FIRE_STUN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_HULL_PIERCE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+Status - Pierce
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_hull_pierce</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_HULL_PIERCE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_HULL_BIO">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+Status - Bio
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_hull_bio</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_HULL_BIO</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_HULL_COOLDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+Status - Cooldown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_hull_cooldown</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_HULL</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_HULL_LOCKDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+Status - Lockdown
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_hull_lockdown</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_HULL_LOCKDOWN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_HULL_STUN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Hull
+Status - Stun
+</desc>
+  <power>2</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_hull_stun</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_HULL_STUN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_POWER_PIERCE">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+Status - Pierce
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_power_pierce</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_POWER_PIERCE</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_POWER_BIO">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+Status - Bio
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_power_bio</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_POWER_BIO</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_POWER_COOLDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+Status - Cooldown
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>12</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_power_cooldown</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_POWER</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_POWER_LOCKDOWN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+Status - Lockdown
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_power_lockdown</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_POWER_LOCKDOWN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="MODULAR_DRONE_ION_POWER_STUN">
+  <type>COMBAT</type>
+  <tip>tip_combat</tip>
+  <title>Modular Ion Drone</title>
+  <short>Mod. Ion</short>
+  <desc>Produced by Hektar Industries(TM), this is the base for a Modular Laser. It supports 1 attribute module and 1 status module.
+Has no incompatible modules.
+----CURRENTLY INSTALLED MODULES----
+Attribute - Power
+Status - Stun
+</desc>
+  <power>3</power>
+  <cooldown>1000</cooldown>
+  <dodge>0</dodge>
+  <speed>8</speed>
+  <cost>67</cost>
+  <bp>8</bp>
+  <droneImage>modular_drone_ion_power_stun</droneImage>
+  <weaponBlueprint>MODULAR_DRONE_WEAPON_ION_POWER_STUN</weaponBlueprint>
+  <rarity>0</rarity>
+  <iconImage>combat</iconImage>
+</droneBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_BASE">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_BASE_PIERCE">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <fireChance>0</fireChance>
+  <breachChance>3</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_BASE_BIO">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>4</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+  <statBoosts>
+    <statBoost name="moveSpeedMultiplier">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="stunMultiplier">
+      <boostType>MULT</boostType>
+      <amount>1.75</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="repairSpeed">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+  </statBoosts>
+  <sysDamage>1</sysDamage>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_BASE_LOCKDOWN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>1</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_BASE_STUN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>12</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_ACCURACY">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>20</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_FIRE">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>3</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_HULL">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>1</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>2</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_POWER">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>2</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_ACCURACY_PIERCE">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>20</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <fireChance>0</fireChance>
+  <breachChance>3</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_ACCURACY_BIO">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>20</accuracyMod>
+  <persDamage>4</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+  <statBoosts>
+    <statBoost name="moveSpeedMultiplier">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="stunMultiplier">
+      <boostType>MULT</boostType>
+      <amount>1.75</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="repairSpeed">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+  </statBoosts>
+  <sysDamage>1</sysDamage>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_ACCURACY_LOCKDOWN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>20</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>1</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_ACCURACY_STUN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>20</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>12</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_FIRE_PIERCE">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <fireChance>3</fireChance>
+  <breachChance>3</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_FIRE_BIO">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>4</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <fireChance>3</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+  <statBoosts>
+    <statBoost name="moveSpeedMultiplier">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="stunMultiplier">
+      <boostType>MULT</boostType>
+      <amount>1.75</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="repairSpeed">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+  </statBoosts>
+  <sysDamage>1</sysDamage>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_FIRE_LOCKDOWN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>1</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>3</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_FIRE_STUN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>12</stun>
+  <sp>0</sp>
+  <fireChance>3</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_HULL_PIERCE">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>1</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <fireChance>0</fireChance>
+  <breachChance>5</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_HULL_BIO">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>4</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+  <statBoosts>
+    <statBoost name="moveSpeedMultiplier">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="stunMultiplier">
+      <boostType>MULT</boostType>
+      <amount>1.75</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="repairSpeed">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+  </statBoosts>
+  <sysDamage>1</sysDamage>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_HULL_LOCKDOWN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>1</hullBust>
+  <lockdown>1</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_HULL_STUN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>1</hullBust>
+  <lockdown>0</lockdown>
+  <stun>12</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_POWER_PIERCE">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>2</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_POWER_BIO">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>4</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+  <statBoosts>
+    <statBoost name="moveSpeedMultiplier">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="stunMultiplier">
+      <boostType>MULT</boostType>
+      <amount>1.75</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="repairSpeed">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+  </statBoosts>
+  <sysDamage>1</sysDamage>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_POWER_LOCKDOWN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>1</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_POWER_STUN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>12</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_BEAM_BASE">
+  <type>BEAM</type>
+  <title>Drone Beam</title>
+  <damage>1</damage>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <speed>10</speed>
+  <length>50</length>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>beam_contact</image>
+  <launchSounds>
+    <sound>beam1</sound>
+    <sound>beam1_2</sound>
+  </launchSounds>
+  <weaponArt>beam_fire</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_BEAM_BASE_PIERCE">
+  <type>BEAM</type>
+  <title>Drone Beam</title>
+  <damage>1</damage>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <speed>10</speed>
+  <length>50</length>
+  <fireChance>0</fireChance>
+  <breachChance>3</breachChance>
+  <rarity>0</rarity>
+  <image>beam_contact</image>
+  <launchSounds>
+    <sound>beam1</sound>
+    <sound>beam1_2</sound>
+  </launchSounds>
+  <weaponArt>beam_fire</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_BEAM_BASE_BIO">
+  <type>BEAM</type>
+  <title>Drone Beam</title>
+  <damage>0</damage>
+  <persDamage>6</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <speed>10</speed>
+  <length>50</length>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>beam_contact</image>
+  <launchSounds>
+    <sound>beam1</sound>
+    <sound>beam1_2</sound>
+  </launchSounds>
+  <weaponArt>beam_fire</weaponArt>
+  <statBoosts>
+    <statBoost name="moveSpeedMultiplier">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="stunMultiplier">
+      <boostType>MULT</boostType>
+      <amount>1.75</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="repairSpeed">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+  </statBoosts>
+  <sysDamage>1</sysDamage>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_BASE_LOCKDOWN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>1</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_BEAM_BASE_STUN">
+  <type>BEAM</type>
+  <title>Drone Beam</title>
+  <damage>1</damage>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>18</stun>
+  <sp>0</sp>
+  <speed>10</speed>
+  <length>50</length>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>beam_contact</image>
+  <launchSounds>
+    <sound>beam1</sound>
+    <sound>beam1_2</sound>
+  </launchSounds>
+  <weaponArt>beam_fire</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_ACCURACY">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>20</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_BEAM_FIRE">
+  <type>BEAM</type>
+  <title>Drone Beam</title>
+  <damage>1</damage>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <speed>10</speed>
+  <length>50</length>
+  <fireChance>4</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>beam_contact</image>
+  <launchSounds>
+    <sound>beam1</sound>
+    <sound>beam1_2</sound>
+  </launchSounds>
+  <weaponArt>beam_fire</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_BEAM_HULL">
+  <type>BEAM</type>
+  <title>Drone Beam</title>
+  <damage>1</damage>
+  <persDamage>0</persDamage>
+  <hullBust>1</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <speed>10</speed>
+  <length>50</length>
+  <fireChance>0</fireChance>
+  <breachChance>1</breachChance>
+  <rarity>0</rarity>
+  <image>beam_contact</image>
+  <launchSounds>
+    <sound>beam1</sound>
+    <sound>beam1_2</sound>
+  </launchSounds>
+  <weaponArt>beam_fire</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_BEAM_POWER">
+  <type>BEAM</type>
+  <title>Drone Beam</title>
+  <damage>1</damage>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <speed>20</speed>
+  <length>110</length>
+  <fireChance>0</fireChance>
+  <breachChance>3</breachChance>
+  <rarity>0</rarity>
+  <image>beam_contact</image>
+  <launchSounds>
+    <sound>beam1</sound>
+    <sound>beam1_2</sound>
+  </launchSounds>
+  <weaponArt>beam_fire</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_ACCURACY_PIERCE">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>20</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <fireChance>0</fireChance>
+  <breachChance>3</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_ACCURACY_BIO">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>20</accuracyMod>
+  <persDamage>4</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+  <statBoosts>
+    <statBoost name="moveSpeedMultiplier">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="stunMultiplier">
+      <boostType>MULT</boostType>
+      <amount>1.75</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="repairSpeed">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+  </statBoosts>
+  <sysDamage>1</sysDamage>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_ACCURACY_LOCKDOWN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>20</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>1</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_ACCURACY_STUN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>20</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>12</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_BEAM_FIRE_PIERCE">
+  <type>BEAM</type>
+  <title>Drone Beam</title>
+  <damage>1</damage>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <speed>10</speed>
+  <length>50</length>
+  <fireChance>4</fireChance>
+  <breachChance>3</breachChance>
+  <rarity>0</rarity>
+  <image>beam_contact</image>
+  <launchSounds>
+    <sound>beam1</sound>
+    <sound>beam1_2</sound>
+  </launchSounds>
+  <weaponArt>beam_fire</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_BEAM_FIRE_BIO">
+  <type>BEAM</type>
+  <title>Drone Beam</title>
+  <damage>0</damage>
+  <persDamage>6</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <speed>10</speed>
+  <length>50</length>
+  <fireChance>4</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>beam_contact</image>
+  <launchSounds>
+    <sound>beam1</sound>
+    <sound>beam1_2</sound>
+  </launchSounds>
+  <weaponArt>beam_fire</weaponArt>
+  <statBoosts>
+    <statBoost name="moveSpeedMultiplier">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="stunMultiplier">
+      <boostType>MULT</boostType>
+      <amount>1.75</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="repairSpeed">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+  </statBoosts>
+  <sysDamage>1</sysDamage>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_FIRE_LOCKDOWN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>1</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>3</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_BEAM_FIRE_STUN">
+  <type>BEAM</type>
+  <title>Drone Beam</title>
+  <damage>1</damage>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>18</stun>
+  <sp>0</sp>
+  <speed>10</speed>
+  <length>50</length>
+  <fireChance>4</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>beam_contact</image>
+  <launchSounds>
+    <sound>beam1</sound>
+    <sound>beam1_2</sound>
+  </launchSounds>
+  <weaponArt>beam_fire</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_BEAM_HULL_PIERCE">
+  <type>BEAM</type>
+  <title>Drone Beam</title>
+  <damage>1</damage>
+  <persDamage>0</persDamage>
+  <hullBust>1</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <speed>10</speed>
+  <length>50</length>
+  <fireChance>0</fireChance>
+  <breachChance>4</breachChance>
+  <rarity>0</rarity>
+  <image>beam_contact</image>
+  <launchSounds>
+    <sound>beam1</sound>
+    <sound>beam1_2</sound>
+  </launchSounds>
+  <weaponArt>beam_fire</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_BEAM_HULL_BIO">
+  <type>BEAM</type>
+  <title>Drone Beam</title>
+  <damage>1</damage>
+  <persDamage>6</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <speed>10</speed>
+  <length>50</length>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>beam_contact</image>
+  <launchSounds>
+    <sound>beam1</sound>
+    <sound>beam1_2</sound>
+  </launchSounds>
+  <weaponArt>beam_fire</weaponArt>
+  <statBoosts>
+    <statBoost name="moveSpeedMultiplier">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="stunMultiplier">
+      <boostType>MULT</boostType>
+      <amount>1.75</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="repairSpeed">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+  </statBoosts>
+  <sysDamage>1</sysDamage>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_HULL_LOCKDOWN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>1</hullBust>
+  <lockdown>1</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_BEAM_HULL_STUN">
+  <type>BEAM</type>
+  <title>Drone Beam</title>
+  <damage>1</damage>
+  <persDamage>0</persDamage>
+  <hullBust>1</hullBust>
+  <lockdown>0</lockdown>
+  <stun>18</stun>
+  <sp>0</sp>
+  <speed>10</speed>
+  <length>50</length>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>beam_contact</image>
+  <launchSounds>
+    <sound>beam1</sound>
+    <sound>beam1_2</sound>
+  </launchSounds>
+  <weaponArt>beam_fire</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_BEAM_POWER_PIERCE">
+  <type>BEAM</type>
+  <title>Drone Beam</title>
+  <damage>1</damage>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <speed>20</speed>
+  <length>110</length>
+  <fireChance>0</fireChance>
+  <breachChance>3</breachChance>
+  <rarity>0</rarity>
+  <image>beam_contact</image>
+  <launchSounds>
+    <sound>beam1</sound>
+    <sound>beam1_2</sound>
+  </launchSounds>
+  <weaponArt>beam_fire</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_BEAM_POWER_BIO">
+  <type>BEAM</type>
+  <title>Drone Beam</title>
+  <damage>0</damage>
+  <persDamage>6</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>1</sp>
+  <speed>20</speed>
+  <length>110</length>
+  <fireChance>0</fireChance>
+  <breachChance>3</breachChance>
+  <rarity>0</rarity>
+  <image>beam_contact</image>
+  <launchSounds>
+    <sound>beam1</sound>
+    <sound>beam1_2</sound>
+  </launchSounds>
+  <weaponArt>beam_fire</weaponArt>
+  <statBoosts>
+    <statBoost name="moveSpeedMultiplier">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="stunMultiplier">
+      <boostType>MULT</boostType>
+      <amount>1.75</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="repairSpeed">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+  </statBoosts>
+  <sysDamage>1</sysDamage>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_LASER_POWER_LOCKDOWN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>1</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>laser_light</image>
+  <launchSounds>
+    <sound>laser_piece</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>hitHull2</sound>
+    <sound>hitHull3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>hitShield1</sound>
+    <sound>hitShield2</sound>
+    <sound>hitShield3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>laser_piece</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_BEAM_POWER_STUN">
+  <type>BEAM</type>
+  <title>Drone Beam</title>
+  <damage>1</damage>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>18</stun>
+  <sp>0</sp>
+  <speed>20</speed>
+  <length>110</length>
+  <fireChance>0</fireChance>
+  <breachChance>3</breachChance>
+  <rarity>0</rarity>
+  <image>beam_contact</image>
+  <launchSounds>
+    <sound>beam1</sound>
+    <sound>beam1_2</sound>
+  </launchSounds>
+  <weaponArt>beam_fire</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_BASE">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>1</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_heavy</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_BASE_PIERCE">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>1</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>10</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_phase</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_BASE_BIO">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>1</ion>
+  <persDamage>6</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_bio</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+  <statBoosts>
+    <statBoost name="moveSpeedMultiplier">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="stunMultiplier">
+      <boostType>MULT</boostType>
+      <amount>1.75</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="repairSpeed">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+  </statBoosts>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_BASE_LOCKDOWN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>1</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>1</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_heavy</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_BASE_STUN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>1</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>25</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_heavy</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_ACCURACY">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>20</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>1</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_heavy</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_FIRE">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>1</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>5</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_heavy</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_HULL">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>-1</sysDamage>
+  <ion>1</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>1</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_heavy</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_POWER">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>3</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_heavy</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_ACCURACY_PIERCE">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>20</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>1</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>10</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_phase</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_ACCURACY_BIO">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>20</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>1</ion>
+  <persDamage>6</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_bio</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+  <statBoosts>
+    <statBoost name="moveSpeedMultiplier">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="stunMultiplier">
+      <boostType>MULT</boostType>
+      <amount>1.75</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="repairSpeed">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+  </statBoosts>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_ACCURACY_LOCKDOWN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>20</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>1</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>1</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_heavy</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_ACCURACY_STUN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>20</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>1</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>25</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_heavy</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_FIRE_PIERCE">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>1</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>10</sp>
+  <fireChance>5</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_phase</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_FIRE_BIO">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>1</ion>
+  <persDamage>6</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>5</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_bio</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+  <statBoosts>
+    <statBoost name="moveSpeedMultiplier">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="stunMultiplier">
+      <boostType>MULT</boostType>
+      <amount>1.75</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="repairSpeed">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+  </statBoosts>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_FIRE_LOCKDOWN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>1</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>1</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>5</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_heavy</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_FIRE_STUN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>1</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>25</stun>
+  <sp>0</sp>
+  <fireChance>5</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_heavy</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_HULL_PIERCE">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>-1</sysDamage>
+  <ion>1</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>10</sp>
+  <fireChance>1</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_phase</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_HULL_BIO">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>-1</sysDamage>
+  <ion>1</ion>
+  <persDamage>6</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>1</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_bio</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+  <statBoosts>
+    <statBoost name="moveSpeedMultiplier">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="stunMultiplier">
+      <boostType>MULT</boostType>
+      <amount>1.75</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="repairSpeed">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+  </statBoosts>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_HULL_LOCKDOWN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>-1</sysDamage>
+  <ion>1</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>1</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>1</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_heavy</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_HULL_STUN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>1</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>-1</sysDamage>
+  <ion>1</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>25</stun>
+  <sp>0</sp>
+  <fireChance>1</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_heavy</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_POWER_PIERCE">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>3</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>10</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_phase</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_POWER_BIO">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>3</ion>
+  <persDamage>6</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_bio</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+  <statBoosts>
+    <statBoost name="moveSpeedMultiplier">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="stunMultiplier">
+      <boostType>MULT</boostType>
+      <amount>1.75</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+    <statBoost name="repairSpeed">
+      <boostType>MULT</boostType>
+      <amount>0.33</amount>
+      <shipTarget>ALL</shipTarget>
+      <crewTarget>ALL</crewTarget>
+      <affectsSelf>true</affectsSelf>
+      <maxStacks>1</maxStacks>
+      <duration>10</duration>
+    </statBoost>
+  </statBoosts>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_POWER_LOCKDOWN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>3</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>1</lockdown>
+  <stun>0</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_heavy</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="MODULAR_DRONE_WEAPON_ION_POWER_STUN">
+  <type>LASER</type>
+  <title>Drone Laser</title>
+  <damage>0</damage>
+  <shots>1</shots>
+  <accuracyMod>0</accuracyMod>
+  <sysDamage>0</sysDamage>
+  <ion>3</ion>
+  <persDamage>0</persDamage>
+  <hullBust>0</hullBust>
+  <lockdown>0</lockdown>
+  <stun>25</stun>
+  <sp>0</sp>
+  <fireChance>0</fireChance>
+  <breachChance>0</breachChance>
+  <rarity>0</rarity>
+  <image>ion_heavy</image>
+  <explosion>explosion_small_ion</explosion>
+  <launchSounds>
+    <sound>ionShoot1</sound>
+    <sound>ionShoot2</sound>
+    <sound>ionShoot3</sound>
+  </launchSounds>
+  <hitShipSounds>
+    <sound>ionHit1</sound>
+    <sound>ionHit2</sound>
+    <sound>ionHit3</sound>
+  </hitShipSounds>
+  <hitShieldSounds>
+    <sound>ionShields1</sound>
+    <sound>ionShields2</sound>
+    <sound>ionShields3</sound>
+  </hitShieldSounds>
+  <missSounds>
+    <sound>miss</sound>
+  </missSounds>
+  <weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
